@@ -7,6 +7,13 @@ console.log(yellowLamp);
 
 button.addEventListener("click", function(){
     console.log("you clicked the button");
-    whiteLamp.classList.add("d-none")
-    yellowLamp.classList.remove("d-none")
+    if(button.innerHTML.includes("Accendi")){
+        whiteLamp.classList.add("d-none")
+        yellowLamp.classList.remove("d-none")
+        button.innerHTML="Spegni"
+    }else{
+         whiteLamp.classList.remove("d-none")
+         yellowLamp.classList.add("d-none")
+         button.innerHTML="Accendi"
+    }
 })
